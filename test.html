@@ -4,66 +4,74 @@
       <title>Quiz</title>
     </head>
     <body>
-      <h1><center>Тест</center></h1>
+      <nav>
+        <a href="index.html">Перейти на головну сторінку</a>
+      </nav>
+      <header>
+        <h1><center>Тест</center></h1>
+      </header>
       <form
-         oninput="x.value=parseInt(a.value);
-         y.value=parseInt(b.value);
-         z.value=parseInt(c.value);">
-        Ваше ім'я:
+         method="POST"
+         action="https://formspree.io/dmytrodanylov@ukr.net"
+         oninput="x.value=parseInt(temp.value);
+         y.value=parseInt(pres.value);
+         z.value=parseInt(grav.value);">
+         Ваше ім'я:
         <input type="text" name="name" value="Name"><br>
         E-mail Adress:
         <input type="text" name="e-mail" value="E-mail Adress"><br>
-
          Яка тривалість року на Марсі?
-           <br>
-          <input type="radio" name="365" value="365">365<br>
-          <input type="radio" name="365" value="428">428<br>
-          <input type="radio" name="365" value="687">687<br>
-          <br>
-           Який радіус Марсу?<br>
-           <select name="radius">
-           <option value="3386">3386 км</option>
-           <option value="3386">6371 км</option>
-           <option value="1536">1536 км</option>
-           </select>
-            <br>
-
-           Як називаются супутники Марсу?<br>
-          <input type="radio" name="Sneekers" value="Sneekers" checked>Снікерс і Баунті<br>
-          <input type="radio" name="Fobos" value="Fobos">Фобос і Деймос<br>
-          <input type="radio" name="Titan" value="Titan">Титан і Ганімед<br>
         <br>
-          В скільки разів Марс віддаленіший від Сонця за Землю?
-           <br>
-          <select name="radius">
+        <input type="radio" name="year" value="365">365<br>
+        <input type="radio" name="year" value="428">428<br>
+        <input type="radio" name="year" value="687">687<br>
+        <br>
+        Який радіус Марсу?<br>
+        <select name="radius">
+          <option value="3386">3386 км</option>
+          <option value="6371">6371 км</option>
+          <option value="1536">1536 км</option>
+        </select>
+        <br>
+        Як називаются супутники Марсу?<br>
+        <input type="radio" name="moon" value="Sneekers" checked>Снікерс і Баунті<br>
+        <input type="radio" name="moon" value="Fobos">Фобос і Деймос<br>
+        <input type="radio" name="moon" value="Titan">Титан і Ганімед<br>
+        <br>
+         В скільки разів Марс віддаленіший від Сонця за Землю?
+         <br>
+         <select name="distance">
            <option value="1,5">1,5</option>
            <option value="2">2</option>
            <option value="3">3</option>
-          </select>
-            <br>
-           Яка середня температура на Марсі?<br>
-           <input type="range" name="a" min=-130 max=20>
+         </select>
+         <br>
+         Яка середня температура на Марсі?<br>
+         <input type="range" name="temp" min=-130 max=20>
           =
-          <output name="x" for a></output>
-          <br>
-          В скільки разів марсіанський атмосферний тиск менший за земний?<br>
-         <input type="range" name="b" min=0 max=200>
+         <output name="x" for temp></output>
+         <br>
+         В скільки разів марсіанський атмосферний тиск менший за земний?<br>
+         <input type="range" name="pres" min=0 max=200>
           =
-          <output name="y" for b></output>
-          <br>
-           Яка найвища гора Марсу?<br>
-           <select name="mountain">
-           <option value="1,5">Етна</option>
-           <option value="2">Олімп</option>
-           <option value="3">Везувій</option>
-           </select>
-           <br>
-           В скільки разів сила тяжіння на Марсі менша за земну?<br>
-          <input type="range" name="c" min=0 max=5>
+         <output name="y" for pres></output>
+         <br>
+         Яка найвища гора Марсу?<br>
+         <select name="mountain">
+           <option value="Etna">Етна</option>
+           <option value="Olimpus">Олімп</option>
+           <option value="Vesuviy">Везувій</option>
+         </select>
+         <br>
+         В скільки разів сила тяжіння на Марсі менша за земну?<br>
+         <input type="range" name="grav" min=0 max=5>
           =
-          <output name="z" for c></output>
-          <br><br>
-          <input type="submit" value="Submit">
+         <output name="z" for grav></output>
+         <br><br>
+         <input type="submit" value="Submit">
         </form>
-       </body>
-      </html>
+        <footer>
+          <p>Published:<time datetime="2019-07-18">July 18,2019</time></p>
+        </footer>
+     </body>
+</html>
